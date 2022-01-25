@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const requiredVersion = require('../package.json').engines.node
 
 const chalk = require('chalk')

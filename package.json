@@ -11,12 +11,15 @@
     "engines": {
         "node": "^12.0.0 || >= 14.0.0"
     },
-    "scripts": {
-        "dev": "set NODE_ENV=developemnt&& rollup -c rollup.config.js -w"
-    },
     "devDependencies": {
         "@tangxiaomi/eslint-config": "^0.0.2"
     },
+    "keywords": [
+        "vue",
+        "serve",
+        "cli",
+        "template"
+    ],
     "dependencies": {
         "chalk": "^4.1.2",
         "commander": "^8.3.0",
