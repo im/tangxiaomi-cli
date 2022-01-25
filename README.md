@@ -3,6 +3,6 @@
 
 ``` sh
 npm install -g @tangxiaomi/cli
-yarn add @tangxiaomi/cli -g
+yarn global add @tangxiaomi/cli
 ```
 
