@@ -19,17 +19,28 @@ checkNodeVersion(requiredVersion, '@tangxiaomi/cli')
 const program = require('commander')
 
 program
-    .version(`@vue/cli ${require('../package').version}`)
+    .version(`v${require('../package').version}`, '-v, --version', '输出版本号')
     .usage('<command> [options]')
-
+    .helpOption('-h, --help', '显示命令行帮助')
 program
     .command('serve')
-    .description('创建本地node服务')
+    .description('启动本地node服务')
     .option('-p, --port <9999>', '指定服务端口，默认 9999')
     .option('-o, --open <false>', '是否自动打开浏览器，默认 false')
-    .action((name, options) => {
-        require('../lib/serve')({ name, options })
+    .action(() => {
+        require('../lib/serve')()
     })
+
+program
+    .command('component')
+    .description('创建组件 ')
+    .action((name, options) => {
+        require('../lib/component')({ name, options })
+    })
+
+// program
+//     .command('help <command>')
+//     .description('显示命令行帮助 ')
 
 program.on('command:*', ([cmd]) => {
     program.outputHelp()
