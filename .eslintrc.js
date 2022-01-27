@@ -1,4 +1,7 @@
 module.exports = {
     root: true,
-    extends: ['@tangxiaomi']
+    extends: ['@tangxiaomi'],
+    rules: {
+        'comma-spacing': ['error', { 'before': false, 'after': true }]
+    }
 }
