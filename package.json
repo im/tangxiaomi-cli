@@ -36,7 +36,7 @@
         "download-git-repo": "^3.0.2",
         "execa": "^1.0.0",
         "express": "^4.17.2",
-        "generate-template-files": "^3.2.0",
+        "get-npm-package": "^0.0.2",
         "inquirer": "^8.2.0",
         "leven": "^3.1.0",
         "minimist": "^1.2.5",
