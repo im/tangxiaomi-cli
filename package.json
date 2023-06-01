@@ -6,7 +6,8 @@
     "license": "MIT",
     "bin": {
         "tangxiaomi": "bin/tangxiaomi.js",
-        "txm": "bin/tangxiaomi.js"
+        "mi": "bin/tangxiaomi.js",
+        "xm": "bin/tangxiaomi.js"
     },
     "repository": {
         "type": "git",
