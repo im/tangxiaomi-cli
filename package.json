@@ -1,6 +1,6 @@
 {
     "name": "@tangxiaomi/cli",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "main": "index.js",
     "author": "tangxiaomi <81195314@qq.com>",
     "license": "MIT",
