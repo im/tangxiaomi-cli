@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+      .board {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        width: 400px;
+        height: 400px;
+      }
+
+      .square {
+        background-color: #fff;
+        border: 1px solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        color: #000;
+      }
+
+      .black {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <!-- Here we create 64 squares -->
+      <div class="square"></div>
+      <div class="square black"></div>
+      <div class="square"></div>
+      <div class="square black"></div>
+      <!-- ... -->
+    </div>
+  </body>
+</html>
+
+<script>
+  const squares = document.querySelectorAll('.square');
+  let blackSquare = false;
+
+  squares.forEach((square) => {
+    if (blackSquare) {
+      square.style.backgroundColor = 'black';
+      square.style.color = 'white';
+    }
+    blackSquare = !blackSquare;
+  });
+</script>

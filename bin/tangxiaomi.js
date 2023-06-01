@@ -24,6 +24,7 @@ program
     .helpOption('-h, --help', '显示命令行帮助')
 program
     .command('serve')
+    .alias('s')
     .description('启动本地node服务')
     .option('-p, --port <9999>', '指定服务端口，默认 9999')
     .option('-o, --open <false>', '是否自动打开浏览器，默认 false')
@@ -33,22 +34,23 @@ program
 
 program
     .command('component')
+    .alias('com')
     .description('创建组件')
     .action(() => {
         require('../lib/component')()
     })
 
-program
-    .command('download')
-    .description('下载npm或github等文件')
-    .option('-t, --type <npm>', '指定要下载的类型 npm | github | gitlab | bitbucket, 默认 npm')
-    .option('-n, --name', 'npm包名或git仓库名')
-    .option('-o, --owner', 'git创库所有者')
-    .option('-b, --branch', 'git分支名')
-    .option('-d, --dest', '下载完成的路径, 如(package/vue) 默认路径(.download)')
-    .action(() => {
-        require('../lib/download')()
-    })
+// program
+//     .command('download')
+//     .description('下载npm或github等文件')
+//     .option('-t, --type <npm>', '指定要下载的类型 npm | github | gitlab | bitbucket, 默认 npm')
+//     .option('-n, --name', 'npm包名或git仓库名')
+//     .option('-o, --owner', 'git创库所有者')
+//     .option('-b, --branch', 'git分支名')
+//     .option('-d, --dest', '下载完成的路径, 如(package/vue) 默认路径(.download)')
+//     .action(() => {
+//         require('../lib/download')()
+//     })
 
 program.on('command:*', ([cmd]) => {
     program.outputHelp()
