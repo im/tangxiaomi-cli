@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
 </script>
 
 <style src="./${__component__}.styl" lang="stylus" scoped></style>
